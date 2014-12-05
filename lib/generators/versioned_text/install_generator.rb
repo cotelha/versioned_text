@@ -23,7 +23,7 @@ module VersionedText
       def copy_migration
         migration_template 'install.rb', 'db/migrate/install_versioned_text.rb'
         migration_template 'install_acts_as_versioned.rb', 'db/migrate/install_acts_as_versioned_text.rb'
-        migration_template 'add_column_type.rb', 'db/migrate/add_column_type.rb'
+        migration_template 'add_column_relation_type_to_versioned_text.rb', 'db/migrate/add_column_relation_type_to_versioned_text.rb'
       end
     end
   end
