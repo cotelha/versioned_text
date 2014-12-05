@@ -20,7 +20,7 @@ module VersionedText
   # * <tt>user</tt>: usuário que executou a alteração
   #
   class VersionText < ::ActiveRecord::Base
-
+    set_inheritance_column :not_used
     acts_as_versioned
 
     belongs_to :versionable, :polymorphic => true
