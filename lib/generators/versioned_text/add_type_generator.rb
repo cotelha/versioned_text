@@ -5,7 +5,7 @@ require 'rails/generators/active_record'
 
 module VersionedText
   module Generators
-    class InstallGenerator < Rails::Generators::Base
+    class AddTypeGenerator < Rails::Generators::Base
       include Rails::Generators::Migration
 
       source_root File.expand_path("../templates", __FILE__)
@@ -21,10 +21,9 @@ module VersionedText
       end
 
       def copy_migration
-        migration_template 'install.rb', 'db/migrate/install_versioned_text.rb'
-        migration_template 'install_acts_as_versioned.rb', 'db/migrate/install_acts_as_versioned_text.rb'
         migration_template 'add_column_type.rb', 'db/migrate/add_column_type.rb'
       end
     end
   end
 end
+

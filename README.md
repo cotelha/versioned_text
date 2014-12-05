@@ -14,6 +14,10 @@ And then execute:
 
     $ bundle
 
+In your project generate install migrations
+
+    $ rails g versioned_text:install
+
 ## Usage
 
 TODO: Write usage instructions here
