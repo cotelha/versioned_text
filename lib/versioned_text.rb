@@ -20,7 +20,7 @@ module VersionedText
   # * <tt>user</tt>: usuário que executou a alteração
   #
   class VersionText < ::ActiveRecord::Base
-    acts_as_versioned
+    acts_as_versioned :if_changed => [:text]
 
     belongs_to :versionable, :polymorphic => true
 
