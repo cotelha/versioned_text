@@ -28,6 +28,10 @@ module VersionedText
     scope :descending, lambda { reorder("version DESC") }
     scope :versionable_finder, lambda {|auditable_id, auditable_type| where(:auditable_id => auditable_id, :auditable_type => auditable_type)}
 
+    def blank?
+      return self.text.blank?
+    end
+
   end
 
   def add_versioned_text_field(field_param, options = {}, &block)
